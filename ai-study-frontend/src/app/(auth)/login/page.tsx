@@ -11,7 +11,7 @@ export default function Login() {
 
     const login = async () => {
 
-        const res = await fetch("http://localhost:5000/api/auth/login",{
+        const res = await fetch("https://ai-study-app-tb06.onrender.com/api/auth/login",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

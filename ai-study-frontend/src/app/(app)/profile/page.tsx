@@ -44,7 +44,7 @@ const deleteAccount = async () => {
 const confirmDelete = confirm("Delete account?");
 if (!confirmDelete) return;
 
-await fetch("http://localhost:5000/api/auth/delete", {
+await fetch("https://ai-study-app-tb06.onrender.com/api/auth/delete", {
 method: "DELETE",
 });
 

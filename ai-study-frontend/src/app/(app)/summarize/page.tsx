@@ -16,7 +16,7 @@ try {
 const token = localStorage.getItem("token")
 
 const res = await fetch(
-"http://localhost:5000/api/notes/summarize",
+"https://ai-study-app-tb06.onrender.com/api/notes/summarize",
 {
 method: "POST",
 headers: {

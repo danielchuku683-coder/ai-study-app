@@ -17,6 +17,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.use(cors({
+  origin: ['https://ai-study-app.vercel.app', 'http://localhost:3000'],
+  credentials: true
+}));
 app.use("/api/auth", authRoutes);
 app.use("/api/ai_questions", questionsRoutes);
 app.use("/api/notes", noteRouters);

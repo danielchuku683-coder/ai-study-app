@@ -20,7 +20,7 @@ const deleteAccount = async () => {
 
     if(!email) return
 
-    await fetch("http://localhost:5000/api/auth/delete",{
+    await fetch("https://ai-study-app-tb06.onrender.com/api/auth/delete",{
         method:"DELETE",
         headers:{
             "Content-Type":"application/json"

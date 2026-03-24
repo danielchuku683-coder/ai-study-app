@@ -12,7 +12,7 @@ const generateQuiz = async ()=>{
 const token = localStorage.getItem("token")
 
 const res = await fetch(
-"http://localhost:5000/api/quizzes/generate",
+"https://ai-study-app-tb06.onrender.com/api/quizzes/generate",
 {
 method:"POST",
 headers:{

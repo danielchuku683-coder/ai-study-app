@@ -28,7 +28,7 @@ useEffect(() => {
 
     const token = localStorage.getItem("token")
 
-    const res = await fetch("http://localhost:5000/api/ai_questions/history", {
+    const res = await fetch("https://ai-study-app-tb06.onrender.com/api/ai_questions/history", {
 
       headers: {
 
@@ -81,7 +81,7 @@ try {
 const token = localStorage.getItem("token")
 
 const res = await fetch(
-"http://localhost:5000/api/ai_questions/ask",
+"https://ai-study-app-tb06.onrender.com/api/ai_questions/ask",
 {
 method: "POST",
 headers: {
@@ -101,7 +101,7 @@ content: data.result
 
 setMessages([...newMessages, aiMessage])
 
-await fetch("http://localhost:5000/api/questions", {
+await fetch("https://ai-study-app-tb06.onrender.com/api/questions", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -138,7 +138,7 @@ sendMessage()
 const createNewChat = async () => {
   const token = localStorage.getItem("token")
 
-  const res = await fetch("http://localhost:5000/api/chats", {
+  const res = await fetch("https://ai-study-app-tb06.onrender.com/api/chats", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`

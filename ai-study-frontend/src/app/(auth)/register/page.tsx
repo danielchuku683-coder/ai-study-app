@@ -33,7 +33,7 @@ if (emailError || passwordError){
     return
 }
 
-const res = await fetch("http://localhost:5000/api/auth/register", {
+const res = await fetch("https://ai-study-app-tb06.onrender.com/api/auth/register", {
 method: "POST",
 headers: {
 "Content-Type": "application/json"
