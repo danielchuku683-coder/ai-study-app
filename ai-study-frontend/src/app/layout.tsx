@@ -1,19 +1,17 @@
-
 import "./globals.css"
-//import Navbar from "../components/Navbar"
-
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-
-    const showSidebar = 
-    typeof window !== "undefined" && 
-    !window.location.pathname.includes("login") &&
-    !window.location.pathname.includes("register")
-return (
-<html lang="en">
-<body className="bg-white dark:bg-gray-900 text-black dark:text-white">
-{children}
-</body>
-</html>
-)
+    return (
+        <html lang="en">
+            {/* We use style here to force the background and text to use your 
+               variables from globals.css. This covers the whole app.
+            */}
+            <body 
+                style={{ backgroundColor: "var(--bg)", color: "var(--text)", minHeight: "100vh" }} 
+                className="transition-colors duration-300"
+            >
+                {children}
+            </body>
+        </html>
+    )
 }
