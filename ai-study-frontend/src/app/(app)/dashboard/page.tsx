@@ -40,7 +40,7 @@ return (
 
       {/* HEADER */}
 
-      <div className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white p-8 rounded-2*1 shadow-*1 mb-8">
+      <div style={{ backgroundColor: "var(--card)", color: "var(--text)", borderColor: "var(--input)" }} className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white p-8 rounded-2*1 shadow-*1 mb-8">
 
         <h1 className="text-3xl font-bold">🤖 AI Study Assistant</h1>
 
