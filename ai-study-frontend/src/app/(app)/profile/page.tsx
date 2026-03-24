@@ -55,57 +55,61 @@ export default function ProfilePage() {
     };
 
     return (
-        /* 2. USE YOUR CSS VARIABLES HERE */
-        <div className="max-w-md mx-auto p-6 space-y-6 min-h-screen">
+    /* This outer div ensures the ENTIRE screen turns dark */
+    <div style={{ backgroundColor: "var(--bg)", color: "var(--text)", minHeight: "100vh" }} className="transition-colors duration-300">
+        
+        <div className="max-w-md mx-auto p-6 space-y-6">
             
             {/* PROFILE IMAGE */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center pt-8">
                 <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-purple-500" 
                      style={{ backgroundColor: "var(--input)" }}>
                     {image && <img src={image} className="w-full h-full object-cover" alt="Profile" />}
                 </div>
-                <input type="file" onChange={handleImage} className="mt-4 text-xs" />
+                <input type="file" onChange={handleImage} className="mt-4 text-xs opacity-70" />
             </div>
 
             {/* NAME INPUT */}
             <div className="space-y-2">
-                <label className="block font-medium">Display Name</label>
+                <label className="block font-medium opacity-80">Display Name</label>
                 <input
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    style={{ backgroundColor: "var(--card)", color: "var(--text)" }}
-                    className="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-purple-500"
+                    style={{ backgroundColor: "var(--card)", color: "var(--text)", borderColor: "var(--input)" }}
+                    className="w-full p-3 border rounded-xl outline-none focus:ring-2 focus:ring-purple-500"
                 />
                 <button
                     onClick={saveName}
-                    className="w-full mt-2 bg-green-600 text-white py-2 rounded-lg font-bold hover:bg-green-700 transition"
+                    className="w-full mt-2 bg-green-600 text-white py-3 rounded-xl font-bold hover:bg-green-700 transition"
                 >
                     Save Name
                 </button>
             </div>
 
-            {/* DARK MODE TOGGLE */}
+            {/* DARK MODE TOGGLE - Styled to match your screenshot */}
             <div className="flex justify-between items-center p-4 rounded-xl border" 
-                 style={{ backgroundColor: "var(--card)" }}>
+                 style={{ backgroundColor: "var(--card)", borderColor: "var(--input)" }}>
                 <span className="font-medium">Dark Mode</span>
                 <button
                     onClick={toggleDark}
-                    className="px-6 py-2 rounded-full font-bold transition-all bg-gray-200 dark:bg-gray-700"
-                    style={{ backgroundColor: dark ? "#3b82f6" : "#cbd5e1", color: dark ? "white" : "#1e293b" }}
+                    className={`px-4 py-2 rounded-full font-bold transition-all flex items-center gap-2 ${
+                        dark ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-800"
+                    }`}
                 >
                     {dark ? "🌙 ON" : "☀️ OFF"}
                 </button>
             </div>
 
-            {/* DANGER ZONE */}
-            <div className="pt-8 space-y-4">
-                <button onClick={logout} className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold">
+            {/* ACTION BUTTONS */}
+            <div className="pt-4 space-y-3">
+                <button onClick={logout} className="w-full bg-blue-600 text-white py-3 rounded-xl font-bold shadow-lg">
                     Logout
                 </button>
-                <button onClick={deleteAccount} className="w-full text-red-500 text-sm font-medium">
+                <button onClick={deleteAccount} className="w-full text-red-500 text-sm font-medium hover:underline">
                     Delete Account
                 </button>
             </div>
         </div>
-    );
+    </div>
+);
 }

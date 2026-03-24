@@ -36,8 +36,8 @@ html, body {
     color: var(--text);
 }
 .dark {
-    --bg: #0f172a;
-    --card: #1e293b;
+    --bg: #0f172a;    /* Very dark navy/black */
+    --card: #1e293b;  /* Slightly lighter for boxes */
     --text: #ffffff;
     --input: #334155;
 }
