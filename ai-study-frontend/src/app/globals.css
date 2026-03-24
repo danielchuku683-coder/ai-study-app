@@ -1,0 +1,113 @@
+@import "tailwindcss";
+.feature-card {
+background: white;
+padding: 20px;
+border-radius: 16px;
+text-align: center;
+cursor: pointer;
+transition: all 0.2s ease;
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.feature-card h2 {
+font-weight: 600;
+margin-top: 10px;
+}
+
+.feature-card p {
+font-size: 14px;
+color: gray;
+}
+
+.feature-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+:root {
+    --bg: #f8fafc;
+    --card:#ffffff;
+    --text: #0f172a;
+    --input:#ffffff;
+}
+
+.dark {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #ffffff;
+    --input: #334155;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* Full screen container */
+.container {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, #667eea, #764ba2);
+padding: 20px;
+}
+
+/* Card */
+.card {
+background: white;
+padding: 30px;
+border-radius: 12px;
+text-align: center;
+width: 100%;
+max-width: 400px; /* 👈 makes it mobile-friendly */
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Title */
+.title {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+color: #666;
+margin-bottom: 20px;
+}
+
+/* Button */
+.button {
+width: 100%; /* 👈 full width on mobile */
+padding: 14px;
+background-color: #667eea;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+/* Hover effect */
+.button:hover {
+background-color: #5a67d8;
+}
+
+/* 📱 MOBILE ADJUSTMENTS */
+@media (max-width: 480px) {
+.card {
+padding: 20px;
+}
+
+.title {
+font-size: 20px;
+}
+
+.button {
+font-size: 15px;
+padding: 12px;
+}
+}

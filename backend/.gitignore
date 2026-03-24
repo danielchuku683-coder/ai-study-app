@@ -1,0 +1,5 @@
+.env
+.env.local
+OllamaSetup.exe
+node_modules/
+.next/
