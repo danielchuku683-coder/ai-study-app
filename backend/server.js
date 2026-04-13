@@ -4,8 +4,7 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
-console.log("API KEY:", process.env.GEMINI_API_KEY);
-console.log("JWT SECRET:", process.env.JWT_SECRET);
+
 const authRoutes = require("./routes/auth");
 const questionsRoutes = require("./routes/questions");
 const noteRouters = require("./routes/notes");
